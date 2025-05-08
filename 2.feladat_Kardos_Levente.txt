@@ -1,0 +1,1 @@
+SELECT név, x_db, ROUND(x_db * 100.0 / SUM(x_db) OVER (), 2) AS x_szazalek FROM játékosadatok;
