@@ -1,0 +1,1 @@
+SELECT 'Verseny átlaga' AS név, ROUND(AVG(lövésérték), 2) AS érték FROM játékosadatok UNION ALL SELECT 'A játékosok, akik jobban teljesítettek az átlagnál:' AS megjegyzes, '' AS érték UNION ALL SELECT név, lövésérték FROM játékosadatok WHERE lövésérték > (SELECT AVG(lövésérték) FROM játékosadatok);
