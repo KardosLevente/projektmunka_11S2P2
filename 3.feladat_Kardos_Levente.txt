@@ -1,0 +1,8 @@
+SELECT 
+  név,
+  x_db,
+  tizes_db,
+  (x_db + tizes_db) AS tiz_es_x,
+  ROUND((x_db + tizes_db) * 100.0 / 36, 2) AS arány_százalék
+FROM játékosadatok
+ORDER BY arány_százalék DESC;
